@@ -12,7 +12,9 @@ The schema was designed with three principles:
 
 ## Entity Relationship Overview
 
-The database consists of **7 modules** interconnected through the central `students` table.
+The database consists of **7 modules** interconnected through two central tables: `students` (identity hub) and `visits` (clinical event hub).
+
+![Database EER Diagram](../images/schema-diagram.png)
 
 ---
 
