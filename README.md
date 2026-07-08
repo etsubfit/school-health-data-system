@@ -1,6 +1,6 @@
 # School Health Data System
 
-### From 10,000 paper records to a structured clinical database and stakeholder dashboards.
+### From 10,000+ paper records to a structured clinical database and stakeholder dashboards.
 
 ---
 
