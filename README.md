@@ -1,5 +1,4 @@
-# school-health-data-system
-Designed and implemented a clinical database for 10,000+ school health records. Covers database schema, ETL workflow, and PowerBI dashboards built for stakeholder decision-making. Portfolio piece only—no patient data included.
+# School Health Data System
 
 ### From 10,000 paper records to a structured clinical database and stakeholder dashboards.
 
@@ -30,7 +29,7 @@ I designed a relational database organized into **6 core modules**:
 | Module | Purpose | Example Tables |
 |:---|:---|:---|
 | **Student Demographics** | Core identity records | `students`, `genders`, `blood_types` |
-| **Clinical** | Encounter-level medical data | `visits`, `vitals`, `complaints`, `diagnoses`, `management` |
+| **Clinical** | Encounter-level medical data | `visits`, `vitals`, `complaints`, `diagnoses`, `management`, `outcomes` |
 | **Academic** | School & grade context | `schools`, `academic_history`, `school_years` |
 | **Nutritional** | Growth monitoring | `anthropometry`, `muac` |
 | **Screening** | Population health checks | `screenings`, `screening_types` |
@@ -42,22 +41,43 @@ I designed a relational database organized into **6 core modules**:
 
 ## 🔄 Data Workflow
 
-Paper Records → Standardized Data Entry (Google Sheets) → Cleaning & Validation → Relational Database (SQL) → PowerBI Dashboards → Stakeholder Reports
+**Paper Records** → **Standardized Data Entry (Google Sheets)** → **Cleaning & Validation** → **Relational Database (SQL)** → **PowerBI Dashboards** → **Stakeholder Reports**
 
 > Full process documentation: [`docs/data-workflow.md`](./docs/data-workflow.md)
 
 ---
 
-## 📊 Sample Dashboard Outputs
+## 📊 Dashboard Suite
 
-Dashboards translated raw data into **stakeholder-ready insights**:
+Five stakeholder dashboards translated raw clinical data into actionable insights:
 
+### 1. Clinical Operations Overview
+- Visit trends across campuses (weekly/monthly)
+- High-utilization students flagged (top 5 per campus)
+
+### 2. Morbidity Surveillance
+- Top 10 presenting complaints across all campuses
+- Diagnosis distribution by campus, age group, and grade
+- Disease prevalence mapped across campuses
+
+### 3. Clinical Decision-Making Analysis
+- Management categories: conservative | counseling | medication | procedural
+- Top 5 management types within each category
+- Medication rejection rate
+- Further investigation and referral rates
+
+### 4. Population Health & Screening
 - Vaccination coverage by school and grade
 - Nutritional status tracking (BMI-for-age, MUAC)
-- Disease prevalence maps across campuses
+- RBS monitoring and abnormal result trends
 - Screening completion rates and referral follow-up
 
-> Mock-up examples: [`docs/dashboard-mockups.md`](./docs/dashboard-mockups.md)
+### 5. Patient Outcomes
+- Outcome distribution: returned to class vs. sent home vs. referred
+- Outcome trends by campus
+- Referral follow-up completion rate
+
+> Full dashboard documentation: [`docs/dashboard-mockups.md`](./docs/dashboard-mockups.md)
 
 ---
 
@@ -71,4 +91,4 @@ Dashboards translated raw data into **stakeholder-ready insights**:
 
 **Etsub Fithaamlak, M.D.**
 General Practitioner | Clinical Data Specialist
-[GitHub Profile Link]
+github.com/etsubfit
