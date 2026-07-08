@@ -60,14 +60,21 @@ This document describes the end-to-end process of transforming paper-based schoo
 
 ---
 
-## Stage 4: Automated Database Load
+## Stage 4: Automated Database Creation and Load
 
 **What happened:**
 
-- Wrote a Python script using the Google Sheets API to read data directly from structured sheets
-- The script transformed sheet data into relational format and loaded it into the SQLite database (TemariCare.db)
+- Wrote a Python script that created the full database schema programmatically (TemariCare)
+- Used the Google Sheets API to read data directly from structured sheets
+- The same Python script transformed sheet data into relational format and loaded it into the database
 - Referential integrity enforced programmatically during the load process
 - Indexes created on frequently queried columns for performance
+
+**Verification:**
+
+- Used MySQL Workbench to cross-check the validity of fetched data
+- Ran spot-check queries to confirm row counts matched source sheets
+- Verified key relationships (every visit had a valid student, school, and clinician)
 
 **Why automation mattered:**
 
@@ -79,7 +86,8 @@ This document describes the end-to-end process of transforming paper-based schoo
 **My role:**
 
 - Designed the database schema before any code was written
-- Wrote the Python ETL script (Google Sheets API to SQLite)
+- Wrote the Python script for schema creation and data loading
+- Used MySQL Workbench for data validation and integrity checks
 - Tested and debugged the pipeline until it ran reliably
 
 ---
@@ -124,17 +132,17 @@ This document describes the end-to-end process of transforming paper-based schoo
 
 ## Technical Summary
 
-Paper Records → Standardized Data Entry (Google Sheets) → Cleaning and Validation (Python, SQL) → Automated ETL: Google Sheets API to SQLite (TemariCare.db) → PowerBI Dashboards (5 suites) → Stakeholder Reports and Action
+Paper Records → Standardized Data Entry (Google Sheets) → Cleaning and Validation (Python, SQL) → Automated Schema Creation and ETL via Python (Google Sheets API to MySQL) → Data Verification (MySQL Workbench) → PowerBI Dashboards (5 suites) → Stakeholder Reports and Action
 
-**Key tools:** Python, Google Sheets API, SQLite, SQL, PowerBI, Excel
+**Key tools:** Python, Google Sheets API, MySQL, MySQL Workbench, SQL, PowerBI, Excel
 
 ---
 
 ## Why This Workflow Matters
 
-This was not a theoretical exercise. It was a real implementation in a resource-constrained setting. The automated pipeline meant that as new records were digitized, the database could be refreshed with a single script. This turned a manual, error-prone process into a repeatable system.
+This was not a theoretical exercise. It was a real implementation in a resource-constrained setting. The automated pipeline meant the entire process, from schema creation to data loading, ran through a single Python script. MySQL Workbench served as the verification layer, ensuring the automation worked correctly before dashboards were built on top.
 
-Every stage, from training collectors to automating the database load to presenting dashboards, was designed to answer one question:
+Every stage, from training collectors to writing the ETL script to presenting dashboards, was designed to answer one question:
 
 *Are our students healthy, and if not, what are we doing about it?*
 
