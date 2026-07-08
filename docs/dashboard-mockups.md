@@ -1,120 +1,93 @@
 # Dashboard Mock-ups
 
-Actual patient data has been redacted. The following describes the five stakeholder dashboards built using PowerBI, including the KPIs and visuals each one contained.
+Actual patient data has been redacted. The following describes the four dashboard tabs built in PowerBI, including the KPIs and visuals each one contained.
 
 ---
 
-## Dashboard 1: Clinical Operations Overview
+## Tab 1: Visits Trend and Overview
 
-**Audience:** Program managers, clinical team leads
+**What it covers:** Clinical operations, patient outcomes, and management patterns
 
-**KPIs:**
-- Total visits (current term and year)
-- Visit trends by campus (weekly and monthly)
-- High-utilization students flagged (top 5 per campus)
+**KPIs and Visuals:**
 
-**Visuals:**
-- Line chart: Visit trends across campuses over time
-- Bar chart: Total visits per campus
-- Table: Top 10 students by visit frequency (anonymized ID)
+- Visit trends across campuses (line chart, weekly and monthly)
+- Total visits per campus (bar chart)
+- High-utilization students flagged (top 5 per campus, table)
+- Outcome distribution: returned to class, sent home, referred (donut chart)
+- Outcome trends by campus (stacked bar)
+- Referral follow-up completion rate (KPI card)
+- Management category distribution: conservative, counseling, medication, procedural (donut chart)
 
 **Why it mattered:**
-For the first time, we could see which campuses had the highest clinical demand. This allowed program managers to allocate staff and resources based on real utilization data, not assumptions.
+This tab gave program managers a single view of clinical demand, what happened to students after their visits, and how clinicians were managing cases. One campus with an unusually high "sent home" rate triggered an investigation into whether those students received appropriate follow-up.
 
 ---
 
-## Dashboard 2: Morbidity Surveillance
+## Tab 2: Complaints and Diagnoses
 
-**Audience:** Public health officers, school health coordinators
+**What it covers:** Morbidity surveillance and disease tracking
 
-**KPIs:**
-- Top 10 presenting complaints across all campuses
-- Diagnosis distribution by campus, age group, and grade
-- Disease prevalence across campuses
+**KPIs and Visuals:**
 
-**Visuals:**
-- Bar chart: Top 10 complaints, ranked
-- Heatmap: Diagnoses by campus
-- Stacked bar: Diagnoses by age group and grade
+- Top 10 presenting complaints across all campuses (bar chart, ranked)
+- Diagnosis distribution by campus (heatmap)
+- Diagnosis trends by age group and grade (stacked bar)
+- Disease prevalence across campuses (heatmap)
 
 **Why it mattered:**
-We could detect clustering of conditions—for example, if respiratory complaints spiked in one campus, it triggered an early investigation. Syndromic surveillance became possible for the first time.
+For the first time, we could detect clustering of conditions. If respiratory complaints spiked in one campus, it triggered an early investigation. Syndromic surveillance became possible.
 
 ---
 
-## Dashboard 3: Clinical Decision-Making Analysis
+## Tab 3: Top Five Management Types per Management Category
 
-**Audience:** Clinical team leads, quality improvement officers
+**What it covers:** Clinical decision-making analysis
 
-**KPIs:**
-- Management category distribution: conservative, counseling, medication, procedural
-- Top 5 management types within each category
-- Medication rejection rate
-- Further investigation rate
-- Referral rate
+**KPIs and Visuals:**
 
-**Visuals:**
-- Donut chart: Management categories (overall distribution)
-- Bar chart: Top 5 management types within each category
-- KPI cards: Medication rejection rate, investigation rate, referral rate
+- Top 5 management types within each category:
+  - Conservative management (top 5)
+  - Counseling and education (top 5)
+  - Medication (top 5)
+  - Procedural (top 5)
+- Medication rejection rate (KPI card)
+- Further investigation rate (KPI card)
+- Referral rate (KPI card)
 
 **Why it mattered:**
-One school discovered their medication rejection rate was three times the average. This led to a targeted health education intervention. Data did not just describe the problem. It pointed to the solution.
+One school discovered their medication rejection rate was three times the average. This led to a targeted health education intervention. Breaking management down by category revealed whether clinicians were over-relying on medication when conservative or educational approaches might have been more appropriate.
 
 ---
 
-## Dashboard 4: Student Health and Screening
+## Tab 4: Nutritional Assessment
 
-**Audience:** Program donors, ministry of education, school principals
+**What it covers:** Growth monitoring, malnutrition screening, and diabetic student tracking
 
-**KPIs:**
-- Vaccination coverage by school and grade
-- Nutritional status: BMI-for-age and MUAC red flags (SAM/MAM)
-- RBS monitoring: tests completed and abnormal result trends
-- Screening completion rate and referral follow-up
+**KPIs and Visuals:**
 
-**Visuals:**
-- Bar chart: Vaccination coverage percentage by school
-- Table: Nutritional status summary (underweight, stunting, SAM, MAM)
-- Gauge chart: Screening completion versus target
-- Line chart: RBS results over time with abnormal trend line
+- BMI category distribution: normal weight, underweight, overweight, obese (donut chart)
+- BMI categories by campus (bar chart)
+- Height vs. weight scatter plot with BMI category color coding
+- MUAC monitoring over time with SAM/MAM threshold lines (line chart)
+- Blood sugar (RBS) monitoring per diabetic student over time (line chart)
+- Students flagged with abnormal BMI, MUAC, or RBS (table)
 
 **Why it mattered:**
-Stakeholders could see, at a glance, which schools were falling behind on screening targets and which had emerging nutritional crises. This turned boardroom conversations from anecdotes into evidence.
-
----
-
-## Dashboard 5: Patient Outcomes
-
-**Audience:** Clinical governance team, program evaluators
-
-**KPIs:**
-- Outcome distribution: returned to class, sent home, referred
-- Outcome trends by campus
-- Referral follow-up completion rate
-
-**Visuals:**
-- Donut chart: Overall outcome distribution
-- Stacked bar: Outcome type by campus
-- KPI card: Referral follow-up completion rate
-
-**Why it mattered:**
-The ultimate measure of a school health service is what happens to the student after the visit. This dashboard closed the loop. If one campus had an unusually high "sent home" rate, we could investigate why—and whether those students received appropriate follow-up care.
+Nutritional status is a leading indicator of child health. This tab turned annual screening data into an ongoing monitoring system. Diabetic students had individualized blood sugar trend lines. Campuses with rising underweight or obesity rates were identified before the problem became a crisis.
 
 ---
 
 ## Summary
 
-| Dashboard | Primary Question Answered |
+| Tab | Primary Question Answered |
 |:---|:---|
-| Clinical Operations | Are we utilizing resources efficiently? |
-| Morbidity Surveillance | What are students suffering from and where? |
-| Clinical Decision-Making | What did we do about it and how appropriately? |
-| Student Health and Screening | Are our preventive programs reaching every student? |
-| Patient Outcomes | What happened to the student after the visit? |
+| Visits Trend and Overview | Who came, what did we do, and what happened to them? |
+| Complaints and Diagnoses | What are students suffering from and where? |
+| Top 5 Management Types | How appropriately and specifically are we treating students? |
+| Nutritional Assessment | Are our students growing and developing properly? |
 
 ---
 
 ## Note
 
-If you have access to PowerBI, simplified versions of these dashboards can be recreated using Microsoft's sample datasets. This demonstrates dashboard design competency without exposing real patient information.
+Screenshots are excluded to protect patient data. Demo versions can be recreated using PowerBI's sample datasets upon request.
