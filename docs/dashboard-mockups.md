@@ -16,7 +16,7 @@ Actual patient data has been redacted. The following describes the four dashboar
 | Total visits per campus | Bar chart | Compare utilization across schools |
 | Total clinical visits per student | Table | Identify high-utilization students |
 | Outcome distribution | Pie chart | Returned to class vs. sent home vs. referred |
-| Management category distribution | Pie chart | Conservative, counseling, medication, procedural |
+| Management category distribution | Donut chart | Conservative, counseling, medication, procedural |
 | Management categories by campus | Clustered column chart | Compare management patterns across schools |
 
 **Filters:** Gender, school, grade
