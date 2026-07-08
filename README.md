@@ -91,4 +91,4 @@ Five stakeholder dashboards translated raw clinical data into actionable insight
 
 **Etsub Fithaamlak, M.D.**
 General Practitioner | Clinical Data Specialist
-github.com/etsubfit
+[github.com/etsubfit](https://github.com/etsubfit)
