@@ -32,7 +32,7 @@ I designed a relational database organized into **6 core modules**:
 | **Clinical** | Encounter-level medical data | `visits`, `vitals`, `complaints`, `diagnoses`, `management`, `outcomes` |
 | **Academic** | School & grade context | `schools`, `academic_history`, `school_years` |
 | **Nutritional** | Growth monitoring | `anthropometry`, `muac` |
-| **Screening** | Population health checks | `screenings`, `screening_types` |
+| **Screening** | Student-wide health checks | `screenings`, `screening_types` |
 | **Disease Surveillance** | Chronic & allergic conditions | `chronic_illnesses`, `allergies` |
 
 > Full schema documentation: [`docs/database-schema.md`](./docs/database-schema.md)
@@ -41,7 +41,7 @@ I designed a relational database organized into **6 core modules**:
 
 ## 🔄 Data Workflow
 
-**Paper Records** → **Standardized Data Entry (Google Sheets)** → **Cleaning & Validation** → **Relational Database (SQL)** → **PowerBI Dashboards** → **Stakeholder Reports**
+Paper Records → Standardized Data Entry (Google Sheets) → Cleaning and Validation (Python, SQL) → Automated ETL: Google Sheets API to MySQL via Python (TemariCare) → Data Verification (MySQL Workbench) → PowerBI Dashboards → Stakeholder Reports
 
 > Full process documentation: [`docs/data-workflow.md`](./docs/data-workflow.md)
 
@@ -49,33 +49,14 @@ I designed a relational database organized into **6 core modules**:
 
 ## 📊 Dashboard Suite
 
-Five stakeholder dashboards translated raw clinical data into actionable insights:
+Four PowerBI dashboard tabs translated raw clinical data into actionable insights:
 
-### 1. Clinical Operations Overview
-- Visit trends across campuses (weekly/monthly)
-- High-utilization students flagged (top 5 per campus)
-
-### 2. Morbidity Surveillance
-- Top 10 presenting complaints across all campuses
-- Diagnosis distribution by campus, age group, and grade
-- Disease prevalence mapped across campuses
-
-### 3. Clinical Decision-Making Analysis
-- Management categories: conservative | counseling | medication | procedural
-- Top 5 management types within each category
-- Medication rejection rate
-- Further investigation and referral rates
-
-### 4. Population Health & Screening
-- Vaccination coverage by school and grade
-- Nutritional status tracking (BMI-for-age, MUAC)
-- RBS monitoring and abnormal result trends
-- Screening completion rates and referral follow-up
-
-### 5. Patient Outcomes
-- Outcome distribution: returned to class vs. sent home vs. referred
-- Outcome trends by campus
-- Referral follow-up completion rate
+| Tab | Key Visuals | Filters |
+|:---|:---|:---|
+| **Visits, Outcomes and Management** | Visit trends (line), visits per campus (bar), visits per student (table), outcomes (pie), management categories (pie), management by campus (clustered column) | Gender, school, grade |
+| **Complaints and Diagnoses** | Complaint counts (bar), diagnosis counts (bar), complaint word cloud | School, gender, grade |
+| **Top 5 Management Types** | Top 5 per management category, with rejection rate, recommendation rate, and referral rate (cards) | — |
+| **Nutritional Assessment** | BMI categories (pie and bar), BMI vs. age (scatter), RBS monitoring (line), MUAC monitoring (line), height vs. weight (scatter) | School, gender, grade |
 
 > Full dashboard documentation: [`docs/dashboard-mockups.md`](./docs/dashboard-mockups.md)
 
@@ -83,7 +64,7 @@ Five stakeholder dashboards translated raw clinical data into actionable insight
 
 ## 🛠 Tools Used
 
-`SQL` `Excel` `Google Sheets` `PowerBI` `Python` `R` `Clinical Workflow Design`
+`Python` `Google Sheets API` `MySQL` `MySQL Workbench` `SQL` `PowerBI` `Excel` `R` `Clinical Workflow Design`
 
 ---
 
