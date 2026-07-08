@@ -1,79 +1,95 @@
 # Dashboard Mock-ups
 
-Actual patient data has been redacted. The following describes the four dashboard tabs built in PowerBI, including the KPIs and visuals each one contained.
+Actual patient data has been redacted. The following describes the four dashboard tabs built in PowerBI, including all visuals, filters, and cards.
 
 ---
 
-## Tab 1: Visits Trend and Overview
+## Tab 1: Visits, Outcomes and Management
 
-**What it covers:** Clinical operations, patient outcomes, and management patterns
+**What it covers:** Clinical utilization, patient outcomes, and management patterns across campuses.
 
-**KPIs and Visuals:**
+**Visuals:**
 
-- Visit trends across campuses (line chart, weekly and monthly)
-- Total visits per campus (bar chart)
-- High-utilization students flagged (top 5 per campus, table)
-- Outcome distribution: returned to class, sent home, referred (donut chart)
-- Outcome trends by campus (stacked bar)
-- Referral follow-up completion rate (KPI card)
-- Management category distribution: conservative, counseling, medication, procedural (donut chart)
+| Visual | Type | Purpose |
+|:---|:---|:---|
+| Visit trends over time | Line chart | Track clinical demand weekly/monthly |
+| Total visits per campus | Bar chart | Compare utilization across schools |
+| Total clinical visits per student | Table | Identify high-utilization students |
+| Outcome distribution | Pie chart | Returned to class vs. sent home vs. referred |
+| Management category distribution | Pie chart | Conservative, counseling, medication, procedural |
+| Management categories by campus | Clustered column chart | Compare management patterns across schools |
+
+**Filters:** Gender, school, grade
+
+**Cards:** Total visits, total students who had clinical visits
 
 **Why it mattered:**
-This tab gave program managers a single view of clinical demand, what happened to students after their visits, and how clinicians were managing cases. One campus with an unusually high "sent home" rate triggered an investigation into whether those students received appropriate follow-up.
+This tab gave program managers a single view of clinical demand, patient flow, and management behavior. The clustered column chart revealed whether certain campuses relied more heavily on medication versus conservative management. The outcomes pie chart showed whether students were being sent home at disproportionate rates.
 
 ---
 
 ## Tab 2: Complaints and Diagnoses
 
-**What it covers:** Morbidity surveillance and disease tracking
+**What it covers:** Morbidity surveillance and syndromic tracking.
 
-**KPIs and Visuals:**
+**Visuals:**
 
-- Top 10 presenting complaints across all campuses (bar chart, ranked)
-- Diagnosis distribution by campus (heatmap)
-- Diagnosis trends by age group and grade (stacked bar)
-- Disease prevalence across campuses (heatmap)
+| Visual | Type | Purpose |
+|:---|:---|:---|
+| Complaint counts | Bar chart | Top presenting complaints ranked |
+| Diagnosis counts | Bar chart | Most common diagnoses ranked |
+| Complaint word cloud | Word cloud | Quick visual summary of frequent complaints |
+
+**Filters:** School, gender, grade
+
+**Cards:** Total students for clinical visits
 
 **Why it mattered:**
-For the first time, we could detect clustering of conditions. If respiratory complaints spiked in one campus, it triggered an early investigation. Syndromic surveillance became possible.
+The bar charts enabled ranked comparison of disease burden. The word cloud gave a rapid, intuitive snapshot of dominant complaints—useful for non-clinical stakeholders. Filtering by school allowed instant comparison of morbidity profiles across campuses.
 
 ---
 
-## Tab 3: Top Five Management Types per Management Category
+## Tab 3: Top 5 Management Types per Category
 
-**What it covers:** Clinical decision-making analysis
+**What it covers:** Clinical decision-making granularity—what exactly did clinicians do within each management category?
 
-**KPIs and Visuals:**
+**Visuals:**
 
-- Top 5 management types within each category:
-  - Conservative management (top 5)
-  - Counseling and education (top 5)
-  - Medication (top 5)
-  - Procedural (top 5)
-- Medication rejection rate (KPI card)
-- Further investigation rate (KPI card)
-- Referral rate (KPI card)
+| Visual | Type | Purpose |
+|:---|:---|:---|
+| Top 5 conservative management types | Bar chart | Most common conservative treatments |
+| Top 5 counseling and education types | Bar chart | Most common health education topics |
+| Top 5 medication types | Bar chart | Most prescribed medications |
+| Top 5 procedural types | Bar chart | Most performed procedures |
+
+**Cards:** Medication rejection rate, recommendation rate, referral rate
 
 **Why it mattered:**
-One school discovered their medication rejection rate was three times the average. This led to a targeted health education intervention. Breaking management down by category revealed whether clinicians were over-relying on medication when conservative or educational approaches might have been more appropriate.
+This tab moved beyond "what category" to "what specifically." It revealed whether prescribing patterns were appropriate, whether counseling was being utilized, and whether high rejection or referral rates in specific campuses needed investigation.
 
 ---
 
 ## Tab 4: Nutritional Assessment
 
-**What it covers:** Growth monitoring, malnutrition screening, and diabetic student tracking
+**What it covers:** Growth monitoring, malnutrition screening, and diabetic student tracking.
 
-**KPIs and Visuals:**
+**Visuals:**
 
-- BMI category distribution: normal weight, underweight, overweight, obese (donut chart)
-- BMI categories by campus (bar chart)
-- Height vs. weight scatter plot with BMI category color coding
-- MUAC monitoring over time with SAM/MAM threshold lines (line chart)
-- Blood sugar (RBS) monitoring per diabetic student over time (line chart)
-- Students flagged with abnormal BMI, MUAC, or RBS (table)
+| Visual | Type | Purpose |
+|:---|:---|:---|
+| BMI category distribution | Pie chart | Normal weight, underweight, overweight, obese |
+| BMI categories by campus | Bar chart | Compare nutritional status across schools |
+| BMI vs. age | Scatter plot | Identify age-based growth patterns and outliers |
+| RBS monitoring | Line chart | Blood sugar trends per diabetic student |
+| MUAC monitoring | Line chart | Mid-upper arm circumference with SAM/MAM thresholds |
+| Height vs. weight | Scatter plot | Visualize growth distribution with BMI color coding |
+
+**Filters:** School, gender, grade
+
+**Cards:** Student count for clinical visits
 
 **Why it mattered:**
-Nutritional status is a leading indicator of child health. This tab turned annual screening data into an ongoing monitoring system. Diabetic students had individualized blood sugar trend lines. Campuses with rising underweight or obesity rates were identified before the problem became a crisis.
+Nutritional status is a leading indicator of child health. The dual scatter plots (BMI vs. age and height vs. weight) gave two complementary views of growth. RBS and MUAC trend lines enabled individualized monitoring of diabetic and malnourished students. Filtering by school revealed which campuses needed urgent nutritional interventions.
 
 ---
 
@@ -81,10 +97,10 @@ Nutritional status is a leading indicator of child health. This tab turned annua
 
 | Tab | Primary Question Answered |
 |:---|:---|
-| Visits Trend and Overview | Who came, what did we do, and what happened to them? |
-| Complaints and Diagnoses | What are students suffering from and where? |
-| Top 5 Management Types | How appropriately and specifically are we treating students? |
-| Nutritional Assessment | Are our students growing and developing properly? |
+| Visits, Outcomes and Management | Who came, what happened to them, and how were they managed? |
+| Complaints and Diagnoses | What are students presenting with and being diagnosed with? |
+| Top 5 Management Types | What specifically did clinicians do within each management category? |
+| Nutritional Assessment | Are students growing properly and where are the nutritional risks? |
 
 ---
 
